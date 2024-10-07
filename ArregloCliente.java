@@ -27,11 +27,12 @@ public class ArregloCliente {
     public ArrayList<Cliente> buscarPorNombre(String nombre) {
         ArrayList<Cliente> resultados = new ArrayList<>();
         for (int i = 0; i < indice; i++) {
-            if (clientes.get(i).getNombre().contains(nombre)) {
+            if (clientes.get(i).getNombre().equals(nombre)) {
                 resultados.add(clientes.get(i));
             }
         }
         return resultados;
     }
+    
 }
 
