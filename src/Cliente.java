@@ -7,7 +7,7 @@ public class Cliente {
     private String telefono;
     private String clave;
     private ArrayList<Oferta> ofertas;
-    private ArrayList<Contacto> contactos;
+    private Contacto contacto;
 
     public Cliente(String RUC, String nombre, String email, String telefono, String clave) {
         this.RUC = RUC;
@@ -16,7 +16,7 @@ public class Cliente {
         this.telefono = telefono;
         this.clave = clave;
         this.ofertas = new ArrayList<>();
-        this.contactos = new ArrayList<>();
+        this.contacto = null;
     }
 
     public boolean agregarOferta(Oferta oferta) {
@@ -32,51 +32,14 @@ public class Cliente {
     }
 
     public boolean registrarContacto(Contacto contacto) {
-        return contactos.add(contacto);
-    }
-
-    public ArrayList<Contacto> getContactos() {
-        return contactos;
-    }
-
-    // Getters y Setters
-    public String getRUC() {
-        return RUC;
-    }
-
-    public void setRUC(String RUC) {
-        this.RUC = RUC;
+        if (this.contacto == null) {
+            this.contacto = contacto;
+            return true;
+        }
+        return false; 
     }
 
     public String getNombre() {
         return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
     }
 }

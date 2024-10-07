@@ -6,7 +6,7 @@ public class Requisito {
     public Requisito(int orden, String descripcion) {
         this.orden = orden;
         this.descripcion = descripcion;
-        this.estado = true; // Habilitado por defecto
+        this.estado = true;
     }
 
     public boolean habilitar() {
@@ -19,24 +19,7 @@ public class Requisito {
         return !this.estado;
     }
 
-    // Getters y Setters
     public int getOrden() {
         return orden;
-    }
-
-    public void setOrden(int orden) {
-        this.orden = orden;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public boolean getEstado() {
-        return estado;
     }
 }

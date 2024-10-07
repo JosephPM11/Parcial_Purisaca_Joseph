@@ -25,58 +25,18 @@ public class Oferta {
     }
 
     public boolean eliminarRequisito(int orden) {
-        for (Requisito r : requisitos) {
-            if (r.getOrden() == orden) {
-                requisitos.remove(r);
+        for (int i = 0; i < requisitos.size(); i++) {
+            if (requisitos.get(i).getOrden() == orden) {
+                requisitos.remove(i);
                 return true;
             }
         }
         return false;
     }
+    
 
     public ArrayList<Requisito> getRequisitos() {
         return requisitos;
-    }
-
-    // Getters y Setters
-    public String getPuesto() {
-        return puesto;
-    }
-
-    public void setPuesto(String puesto) {
-        this.puesto = puesto;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public String getArea() {
-        return area;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
-    }
-
-    public Date getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    public Date getFechaTermino() {
-        return fechaTermino;
-    }
-
-    public void setFechaTermino(Date fechaTermino) {
-        this.fechaTermino = fechaTermino;
     }
 }
 
